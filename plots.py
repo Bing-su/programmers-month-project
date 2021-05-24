@@ -4,7 +4,6 @@ import seaborn as sns
 import altair as alt
 
 
-@st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def rating_average(df, style):
     if style == "altair":
         with st.echo():
@@ -35,7 +34,6 @@ def rating_average(df, style):
         return fig
 
 
-@st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def rating_sum(df, style):
     if style == "altair ":
         with st.echo():
@@ -81,7 +79,6 @@ def rating_sum(df, style):
         return fig
 
 
-@st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def top10(df, genre, col):
     with st.echo():
         top10 = df[df["category"] == genre].iloc[:10, :]
@@ -99,7 +96,6 @@ def top10(df, genre, col):
     return fig
 
 
-@st.cache(allow_output_mutation=True, suppress_st_warning=True)
 def growth(df, days):
     days = 30 if days == "30일" else 60
 
